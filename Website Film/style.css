@@ -1,0 +1,512 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: black;
+  background-size: contain;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 60vh;
+}
+.background-clip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .background-clip {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .background-clip {
+    width: auto;
+    height: 100%;
+  }
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  display: flex;
+  height: 5vh;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgb(0, 0, 0);
+  border-bottom: 1px solid #70050c;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+.navbar .logo img {
+  margin-left: 5px;
+  margin-top: 5px;
+  height: 9vh;
+}
+.navbar .navbar-nav a {
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 20px;
+  margin: 0 1rem;
+}
+.navbar .navbar-nav a:hover {
+  color: #70050c;
+}
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(1);
+}
+.navbar .navbar-extra {
+  cursor: pointer;
+  color: white;
+}
+.navbar-extra a {
+  text-decoration: none;
+  color: #020000;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 10px 30px;
+}
+.navbar-extra a:hover {
+  background-color: #70050c;
+  color: #000000;
+  font-weight: bolder;
+}
+.navbar-extra i {
+  font-size: 20px;
+  margin-right: 10px;
+  padding: 0px 14px;
+}
+.navbar .navbar-extra a {
+  color: #000000;
+  margin: 0 0.5rem;
+}
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+/* NAVBAR END */
+
+/* HEROPAGE */
+.heropage {
+  position: absolute;
+  color: white;
+  margin-top: 100px;
+  margin-left: 100px;
+  height: 75vh;
+}
+.inside-heropage {
+  line-height: 1.2;
+}
+.inside-heropage h1 {
+  font-size: 40px;
+  margin: 0;
+  padding: 0;
+}
+.inside-heropage p {
+  font-size: 17px;
+}
+span {
+  color: #70050c;
+  font-size: 25px;
+  font-weight: bold;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.line1 {
+  height: 2px;
+  color: rgb(112, 5, 12);
+  width: 12%;
+  margin-left: 0px;
+  margin-top: 0px;
+  position: absolute;
+}
+.poster {
+  margin-top: 160px;
+  margin-right: 100px;
+}
+.poster img {
+  height: 320px;
+  float: right;
+  border-radius: 10px;
+}
+button1 {
+  margin-top: 30px;
+}
+.button1 a {
+  text-decoration: none;
+  margin-left: 5px;
+  color: white;
+  background: #70050c;
+  border-radius: 20px;
+}
+.button1 a:hover {
+  background-color: black;
+  color: #70050c;
+}
+.button1-wl {
+  padding: 10px 20px;
+}
+.button1-trailer {
+  padding: 10px 45px;
+}
+.button1 i {
+  color: #ffffff;
+  padding: 0px 10px;
+}
+/* END */
+
+/* TRENDING MOVIE */
+.trending-movie {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  margin-top: 550px;
+  padding: 0px 20px;
+  scroll-margin-top: 75px;
+}
+.trending-movie h1 {
+  font-size: 20px;
+  color: #70050c;
+}
+
+.latest-container {
+  padding: 10px 0px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+}
+.latest-inside img {
+  height: 125px;
+  padding: 2px;
+  cursor: pointer;
+  transition: all 500ms ease-in-out;
+}
+.latest-inside img:hover {
+  transform: scale(1.2);
+}
+.heading1 {
+  color: white;
+  line-height: 0.5;
+}
+.heading1 h4 {
+  font-size: 15px;
+}
+.heading1 h6 {
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+.button2 {
+  margin-top: 0px;
+  margin-left: 0px;
+}
+.button2 a {
+  text-decoration: none;
+  font-size: 13px;
+  background: #70050c;
+  padding: 7px 7px;
+  color: white;
+  border-radius: 10px;
+}
+/* END */
+
+/* MOVIE */
+.movie {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  padding: 0px 20px;
+  color: white;
+  margin-top: 920px;
+  scroll-margin-top: 75px;
+}
+.movie h1 {
+  font-size: 20px;
+  color: #70050c;
+}
+.movie-container {
+  padding: 10px 0px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 55px;
+}
+.movie-inside h3 {
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 6px;
+}
+.movie-inside img {
+  height: 250px;
+  border-radius: 10px;
+  transition: all 500ms ease-in-out;
+}
+.movie-inside img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.imdb {
+  background: #70050c;
+  border-radius: 50%;
+  position: absolute;
+  padding: 10px;
+  color: white;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -80px;
+  margin-left: 120px;
+  font-weight: bolder;
+}
+.more {
+  position: absolute;
+  margin-top: 950px;
+  margin-left: 1200px;
+}
+.more a {
+  color: #70050c;
+  font-weight: bolder;
+  text-decoration: none;
+}
+/* END */
+
+/* SERIES */
+.series {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  padding: 0px 20px;
+  color: white;
+  margin-top: 1300px;
+  scroll-margin-top: 75px;
+}
+.series h1 {
+  font-size: 20px;
+  color: #70050c;
+}
+.series-container {
+  padding: 10px 0px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 50px;
+}
+.series-inside h3 {
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 6px;
+}
+.series-inside img {
+  height: 250px;
+  border-radius: 10px;
+  transition: all 500ms ease-in-out;
+}
+.series-inside img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.imdb {
+  background: #70050c;
+  border-radius: 50%;
+  position: absolute;
+  padding: 10px;
+  color: white;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -80px;
+  margin-left: 120px;
+  font-weight: bolder;
+}
+.more2 {
+  position: absolute;
+  margin-top: 1330px;
+  margin-left: 1200px;
+}
+.more2 a {
+  color: #70050c;
+  font-weight: bolder;
+  text-decoration: none;
+}
+/* END */
+
+/* FOOTER */
+.footer {
+  position: absolute;
+  margin-top: 1800px;
+  height: 25vh;
+  background: #141414;
+  width: 1300px;
+}
+
+.logopart img {
+  height: 70px;
+  width: 140px;
+  margin-left: 50px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.copyright {
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+}
+
+.copyright p {
+  color: #ffffff;
+  margin: 0;
+  font-size: 16px;
+}
+
+.rayu {
+  color: #ffffff;
+  transition: 0.3s ease;
+}
+.rayu:hover {
+  color: #70050c;
+}
+
+.social {
+  display: flex;
+  font-size: 27px;
+  padding: 10px;
+  color: #ffffff;
+  gap: 20px;
+  transition: 0.5s ease-in-out;
+}
+
+.ig {
+  color: #ffffff;
+}
+.ig:hover {
+  color: #70050c;
+}
+
+.wa:hover {
+  color: #70050c;
+}
+
+.fb:hover {
+  color: #70050c;
+}
+.sub {
+  margin-left: 60px;
+}
+
+.sub a {
+  margin-right: 160px;
+  text-decoration: none;
+  padding: 10px 25px;
+  color: white;
+  background: #70050c;
+  border-radius: 50px;
+}
+/* END */
+
+/* SCROLL */
+.scroll {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background: #70050c;
+  border-radius: 50px;
+  bottom: 60px;
+  right: 50px;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 45px;
+  text-align: center;
+}
+
+.scroll i {
+  color: white;
+}
+/* END */
+
+/* Deskripsi */
+.Deskripsi-Movie {
+  margin: 50px;
+  text-align: center;
+}
+.Deskripsi-Movie h1 {
+  color: white;
+  font-size: 35px;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+.deskripsi-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  box-shadow: 5px;
+}
+.poster-deskripsi img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+}
+.deskripsi {
+  background-color: #70050c;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+}
+.deskripsi h2 {
+  text-align: left;
+  font-size: 25px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.deskripsi p {
+  text-align: justify;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+
+/* END */
